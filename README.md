@@ -1,0 +1,1 @@
+# Plataforma-RH-Cadastro-de-Vagas-e-Curr-culos
