@@ -28,5 +28,29 @@
       "descricao": "Vaga de Gerente de Nuvem Geral",
       "salario": 8500
     }
+  ],
+  "curriculos": [
+    {
+      "id": 1,
+      "nome": "João Silva",
+      "email": "joao@email.com",
+      "experiencia": "FrontEnd Jr",
+      "foto": "curriculo1.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Maria Souza",
+      "email": "maria@email.com",
+      "experiencia": "BackEnd Pleno",
+      "foto": "curriculo2.jpg"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Exemplo",
+      "email": "exemplo@email.com",
+      "senha": "123456"
+    }
   ]
 }
