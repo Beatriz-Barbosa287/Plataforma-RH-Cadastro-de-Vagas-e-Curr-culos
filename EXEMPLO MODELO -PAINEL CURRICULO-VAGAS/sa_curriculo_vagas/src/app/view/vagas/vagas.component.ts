@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { VagaService } from '../../service/vaga.service'; 
+import { VagasService } from '../../service/vaga.service'; 
+import { Vaga } from 'src/app/models/vaga.model';
 
 @Component({
   selector: 'app-vagas',
@@ -8,10 +9,10 @@ import { VagaService } from '../../service/vaga.service';
 })
 export class VagasComponent implements OnInit {
 
-  vagas: any[] = [];
-
-  constructor(private vagaService: VagaService) {}
   public vagas: Vaga[] = [];
 
-  constructor(private _vagasService: VagaService) {}
-
+  constructor(private vagaService: VagasService) {}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+}
