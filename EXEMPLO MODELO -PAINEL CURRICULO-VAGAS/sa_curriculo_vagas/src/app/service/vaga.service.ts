@@ -7,32 +7,29 @@ import { Vaga } from '../models/vaga.model';
   providedIn: 'root',
 })
 export class VagaService {
-  //atributo -> localhost
-  private apiUrl = 'http://localhost:3009/vagas'; //Caminho para o Arquivo Json
+  private apiUrl = 'http://localhost:3009/vagas'; // JSON Server ou backend
 
   constructor(private http: HttpClient) {}
 
-  //Comunição CRUD da API ( get / post/ put / delete)
-
-  //obter a lista de vagas (GET)
+  // ➝ Listar todas as vagas
   getVagas(): Observable<Vaga[]> {
     return this.http.get<Vaga[]>(this.apiUrl);
   }
 
-  //Cadastrar POST
-  cadastrarVaga(vaga: Vaga): Observable<Vaga[]> {
-    return this.http.post<Vaga[]>(this.apiUrl, vaga);
+  // ➝ Cadastrar vaga (Admin)
+  cadastrarVaga(vaga: Vaga): Observable<Vaga> {
+    return this.http.post<Vaga>(this.apiUrl, vaga);
   }
 
-  //Atualizar PUT
-atualizarVaga(id: any, vaga: Vaga): Observable<Vaga[]> {
-  const urlAtualizar = `${this.apiUrl}/${id}`;
-  return this.http.put<Vaga[]>(urlAtualizar, vaga);
-}
+  // ➝ Atualizar vaga (Admin)
+  atualizarVaga(id: number, vaga: Vaga): Observable<Vaga> {
+    const urlAtualizar = `${this.apiUrl}/${id}`;
+    return this.http.put<Vaga>(urlAtualizar, vaga);
+  }
 
-//Deletar DELETE
-removerVaga(id: any): Observable<Vaga[]> {
-  const urlDeletar = `${this.apiUrl}/${id}`;
-  return this.http.delete<Vaga[]>(urlDeletar);
-}
+  // ➝ Remover vaga (Admin)
+  removerVaga(id: number): Observable<void> {
+    const urlDeletar = `${this.apiUrl}/${id}`;
+    return this.http.delete<void>(urlDeletar);
+  }
 }

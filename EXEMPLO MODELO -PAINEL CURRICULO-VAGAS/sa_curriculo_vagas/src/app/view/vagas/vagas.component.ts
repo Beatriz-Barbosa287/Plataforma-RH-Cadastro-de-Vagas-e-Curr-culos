@@ -1,34 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { Vaga } from 'src/app/models/vaga.model';
-import { VagaService } from 'src/app/service/vaga.service';
+import { VagaService } from '../../service/vaga.service'; 
 
 @Component({
   selector: 'app-vagas',
   templateUrl: './vagas.component.html',
-  styleUrls: ['./vagas.component.scss'],
+  styleUrls: ['./vagas.component.scss']
 })
 export class VagasComponent implements OnInit {
-  public vagas: Vaga[] = []; //vetor para armazenar as vagas
+  vagas: any[] = [];
 
-  constructor(private _vagasService: VagaService) {}
-  // Injetando o serviço de vagas no contrutor do componente
+  constructor(private vagaService: VagaService) {}
 
   ngOnInit(): void {
-    this.listarVagas();
+    this.vagaService.getVagas().subscribe((data: any[]) => {
+      this.vagas = data;
+    });
   }
 
-  listarVagas() {
-    this._vagasService.getVagas().subscribe((retornaVaga) => {
-      //mapear os dados da API
-      this.vagas = retornaVaga.map((item) => {
-        return new Vaga(
-          item.id,
-          item.nome,
-          item.foto,
-          item.descricao,
-          item.salario
-        );
-      });
-    });
+  candidatar(vaga: any) {
+    alert(`Você se candidatou para: ${vaga.titulo}`);
   }
 }
