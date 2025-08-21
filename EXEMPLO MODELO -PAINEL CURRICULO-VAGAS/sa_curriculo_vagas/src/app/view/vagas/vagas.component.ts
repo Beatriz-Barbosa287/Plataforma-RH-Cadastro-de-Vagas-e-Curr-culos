@@ -8,10 +8,9 @@ import { VagaService } from 'src/app/service/vaga.service';
   styleUrls: ['./vagas.component.scss'],
 })
 export class VagasComponent implements OnInit {
-  public vagas: Vaga[] = []; //vetor para armazenar as vagas
+  public vagas: Vaga[] = [];
 
   constructor(private _vagasService: VagaService) {}
-  // Injetando o serviço de vagas no contrutor do componente
 
   ngOnInit(): void {
     this.listarVagas();

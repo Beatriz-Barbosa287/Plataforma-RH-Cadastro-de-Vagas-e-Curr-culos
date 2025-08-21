@@ -1,32 +1,16 @@
 {
-  "vagas": [
+  "usuarios": [
     {
       "id": 1,
-      "nome": "Desenvolver FrontEnd Jr",
-      "foto": "foto1.jpg",
-      "descricao": "Trabalhar com HTML, CSS e JS",
-      "salario": 4000
+      "email": "admin@rh.com",
+      "senha": "admin123",
+      "tipo": "admin"
     },
     {
       "id": 2,
-      "nome": "Desenvolver BackEnd Pleno",
-      "foto": "foto2.jpg",
-      "descricao": "Trabalhar com Desenvolvimento Web",
-      "salario": 7000
-    },
-    {
-      "id": 3,
-      "nome": "Desenvolver Fullstack Senior",
-      "foto": "foto3.webp",
-      "descricao": "Trabalhar com Desenvolvimento Web",
-      "salario": 10000
-    },
-    {
-      "id": 4,
-      "nome": "Gerente de Nuvem",
-      "foto": "foto4.webp",
-      "descricao": "Vaga de Gerente de Nuvem Geral",
-      "salario": 8500
+      "nome": "Exemplo",
+      "email": "exemplo@email.com",
+      "senha": "123456"
     }
   ],
   "curriculos": [
@@ -45,12 +29,5 @@
       "foto": "curriculo2.jpg"
     }
   ],
-  "usuarios": [
-    {
-      "id": 1,
-      "nome": "Exemplo",
-      "email": "exemplo@email.com",
-      "senha": "123456"
-    }
-  ]
+  "vagas": []
 }

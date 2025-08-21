@@ -1,1 +1,48 @@
-<p>login works!</p>
+<div class="login-container">
+  <h1 class="login-title">Login</h1>
+  <h3 class="subtitle">Acesse sua conta</h3>
+
+  <div class="login-box">
+    <form (ngSubmit)="onLogin()">
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        [(ngModel)]="email"
+        name="email"
+        required
+      />
+
+      <label for="senha">Senha</label>
+      <input
+        type="password"
+        id="senha"
+        [(ngModel)]="senha"
+        name="senha"
+        required
+      />
+
+      <label for="tipoUsuario">Tipo de Usuário</label>
+      <select
+        id="tipoUsuario"
+        [(ngModel)]="tipoUsuario"
+        name="tipoUsuario"
+        required
+      >
+        <option value="" disabled selected>Selecione</option>
+        <option value="empresa">Comum</option>
+        <option value="candidato">Administrador</option>
+      </select>
+
+      <button type="submit">Entrar</button>
+    </form>
+
+    <p class="cadastro">
+      Não possui conta? <a routerLink="/cadastro">Cadastre-se</a>
+    </p>
+  </div>
+
+  <div class="footer">
+    <img src="assets/img/RH-Connect.png" alt="RH Connect Logo" class="logo" />
+  </div>
+</div>
