@@ -1,71 +1,44 @@
-import { Component, OnInit } from '@angular/core';
-import { Vaga } from 'src/app/models/vaga.model';
-import { VagaService } from 'src/app/service/vaga.service';
+import { Component } from '@angular/core';
+
+interface Vaga {
+  id: number;
+  nome: string;
+  foto: File | null;
+  descricao: string;
+  salario: number;
+}
 
 @Component({
   selector: 'app-painel-vagas',
   templateUrl: './painel-vagas.component.html',
-  styleUrls: ['./painel-vagas.component.scss'],
+  styleUrls: ['./painel-vagas.component.css']
 })
-export class PainelVagasComponent implements OnInit {
-  //atributos
-  public vaga: Vaga = new Vaga(0, '', '', '', 0); //rastreas os dados do Formulário
-  // vetor para armazenar as info do DB
-  public vagas: Vaga[] = [];
+export class PainelVagasComponent {
+  vaga: Vaga = { id: 0, nome: '', foto: null, descricao: '', salario: 0 };
+  vagas: Vaga[] = [];
 
-  constructor(private _vagasService: VagaService) {} //servico é criado ao ser construido o obj
-
-  ngOnInit(): void {
-    this.listarVagas();
-  }
-
-  //colocr as vagas na TAbela
-  listarVagas() {
-    this._vagasService.getVagas().subscribe((retornoVaga) => {
-      this.vagas = retornoVaga.map((item) => Vaga.fromMap(item));
-    });
-  }
-
-  // listar Vaga Unica
-  listarVagaUnica(vaga: Vaga) {
-    this.vaga = vaga;
-  }
-
-  //cadastrar nova Vaga
   cadastrar() {
-    this._vagasService.cadastrarVaga(this.vaga).subscribe(
-      () => {
-        this.vaga = new Vaga(0, '', '', '', 0);
-        this.listarVagas();
-      },
-      (err) => {
-        console.error('Erro ao Cadastrar', err);
-      }
-    );
+    this.vagas.push({ ...this.vaga });
+    this.limparFormulario();
   }
 
-  // atualizar nova Vaga
   atualizar(id: number) {
-    this._vagasService.atualizarVaga(id, this.vaga).subscribe(
-      () => {
-        this.vaga = new Vaga(0, '', '', '', 0);
-        this.listarVagas();
-      },
-      (err) => {
-        console.log('Erro ao atualizar', err);
-      }
-    );
+    const index = this.vagas.findIndex(v => v.id === id);
+    if (index !== -1) {
+      this.vagas[index] = { ...this.vaga };
+      this.limparFormulario();
+    }
   }
 
-  //deletar vaga
   excluir(id: number) {
-    this._vagasService.removerVaga(id).subscribe(
-      () => {
-        this.listarVagas();
-      },
-      (err) => {
-        console.log('Erro ao Deletar', err);
-      }
-    );
+    this.vagas = this.vagas.filter(v => v.id !== id);
+  }
+
+  listarVagaUnica(vaga: Vaga) {
+    this.vaga = { ...vaga }; // Populate the form with selected job details
+  }
+
+  private limparFormulario() {
+    this.vaga = { id: 0, nome: '', foto: null, descricao: '', salario: 0 };
   }
 }
