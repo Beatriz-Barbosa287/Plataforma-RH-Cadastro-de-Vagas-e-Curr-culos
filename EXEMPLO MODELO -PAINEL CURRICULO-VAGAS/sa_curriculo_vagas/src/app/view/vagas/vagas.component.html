@@ -1,3 +1,4 @@
+
 <div class="vagas-container">
   <div class="logo">
     <img src="assets/logo.png" alt="RH Connect">
@@ -12,6 +13,8 @@
       <p><strong>Tipo de Contratação:</strong> {{ vaga.tipo }}</p>
       <p><strong>Data de Publicação:</strong> {{ vaga.dataPublicacao | date:'dd/MM/yyyy' }}</p>
       <button (click)="candidatar(vaga)">Candidatar</button>
+
+
     </div>
   </div>
 

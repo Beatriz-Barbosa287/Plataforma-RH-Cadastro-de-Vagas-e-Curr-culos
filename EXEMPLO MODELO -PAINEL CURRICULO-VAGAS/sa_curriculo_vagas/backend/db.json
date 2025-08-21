@@ -5,6 +5,15 @@
       "email": "admin@rh.com",
       "senha": "admin123",
       "tipo": "admin"
+<<<<<<< HEAD
+    },
+    {
+      "id": 2,
+      "nome": "Exemplo",
+      "email": "exemplo@email.com",
+      "senha": "123456"
+=======
+>>>>>>> 5b2ac2ee6ff4aa91a7da96712d10a413d4d5c5ac
     }
   ],
 
@@ -24,6 +33,8 @@
       "foto": "curriculo2.jpg"
     }
   ],
+<<<<<<< HEAD
+=======
   "usuarios": [
     {
       "id": 1,
@@ -34,6 +45,7 @@
   ]
 =======
   "curriculos": [],
+>>>>>>> 5b2ac2ee6ff4aa91a7da96712d10a413d4d5c5ac
   "vagas": []
 }
 

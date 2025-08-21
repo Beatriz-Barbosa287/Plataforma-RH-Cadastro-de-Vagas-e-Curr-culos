@@ -7,17 +7,11 @@ import { VagaService } from '../../service/vaga.service';
   styleUrls: ['./vagas.component.scss']
 })
 export class VagasComponent implements OnInit {
+
   vagas: any[] = [];
 
   constructor(private vagaService: VagaService) {}
+  public vagas: Vaga[] = [];
 
-  ngOnInit(): void {
-    this.vagaService.getVagas().subscribe((data: any[]) => {
-      this.vagas = data;
-    });
-  }
+  constructor(private _vagasService: VagaService) {}
 
-  candidatar(vaga: any) {
-    alert(`Você se candidatou para: ${vaga.titulo}`);
-  }
-}
