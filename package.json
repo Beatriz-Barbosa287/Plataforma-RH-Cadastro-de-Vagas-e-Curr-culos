@@ -1,0 +1,20 @@
+{
+  "name": "plataforma-rh-cadastro-de-vagas-e-curr-culos",
+  "version": "1.0.0",
+  "description": "- ESCOPO - \r **Objetivo Geral**\r Desenvolver uma aplicação Angular com back-end simulado utilizando json-server, que permita a gestão de vagas e currículos. O sistema deve implementar autenticação (login e registro) e autorização baseada no tipo de usuário (Administrador e Usuário Comum).\r O desenvolvimento será realizado em etapas bem definidas:\r Levantamento de Requisitos – Identificação das necessidades funcionais e não funcionais do sistema.\r **Prototipagem** – Criação das telas e fluxos de navegação no Figma ou ferramenta similar.\r **Diagramação** – Definição da arquitetura, rotas e componentes Angular.\r **Codificação** – Implementação front-end e integração com o back-end simulado.\r -----------------------------------------------------------\r 1. Funcionalidades Principais\r **Área do Candidato (Usuário comum):**\r Cadastro de conta (nome, e-mail, senha, dados pessoais).\r Login com autenticação JWT.\r Cadastro e edição de currículo (formulário completo).\r Visualização de vagas disponíveis.\r Candidatura a vagas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beatriz-Barbosa287/Plataforma-RH-Cadastro-de-Vagas-e-Curr-culos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beatriz-Barbosa287/Plataforma-RH-Cadastro-de-Vagas-e-Curr-culos/issues"
+  },
+  "homepage": "https://github.com/Beatriz-Barbosa287/Plataforma-RH-Cadastro-de-Vagas-e-Curr-culos#readme"
+}
