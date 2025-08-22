@@ -15,10 +15,16 @@ export class LoginComponent {
 
   onLogin() {
     if (this.email && this.senha && this.tipoUsuario) {
-      alert(`Login realizado com sucesso! Bem-vindo, ${this.tipoUsuario}.`);
+      alert(`Login realizado com sucesso! Bem-vindo!`);
       this.router.navigate(['/painel-vagas']);
     } else {
-      alert('Preencha todos os campos!');
+      alert('Usuário ou senha inválidos!');
     }
+  }
+
+
+  logout() {
+    localStorage.removeItem('usuarioLogado');
+    this.router.navigate(['/login']);
   }
 }

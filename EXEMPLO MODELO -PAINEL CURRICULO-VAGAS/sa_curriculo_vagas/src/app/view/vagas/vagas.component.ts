@@ -10,9 +10,14 @@ import { Vaga } from 'src/app/models/vaga.model';
 export class VagasComponent implements OnInit {
 
   public vagas: Vaga[] = [];
+  currentYear: number = new Date().getFullYear();
 
   constructor(private vagaService: VagasService) {}
   ngOnInit(): void {
     throw new Error('Method not implemented.');
+  }
+
+  candidatar(vaga: any) {
+    // Implement your logic here
   }
 }

@@ -1,3 +1,4 @@
+$azul-escuro: #123456; // Replace with your color
 
 .cadastro-container {
   display: flex;
@@ -53,7 +54,7 @@ label {
 input {
   padding: 10px;
   margin-top: 5px;
-
+}
 select {
   padding: 12px;
   margin-top: 6px;
@@ -82,7 +83,7 @@ button:hover {
 .ja-tem-conta {
   text-align: center;
   margin-top: 15px;
-
+} 
 .ja-tem-conta {
   text-align: center;
   margin-top: 20px;
