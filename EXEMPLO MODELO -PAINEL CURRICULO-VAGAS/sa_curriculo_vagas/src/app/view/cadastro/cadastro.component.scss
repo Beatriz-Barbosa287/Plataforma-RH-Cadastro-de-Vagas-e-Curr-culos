@@ -1,4 +1,4 @@
-/* Container geral */
+
 .cadastro-container {
   display: flex;
   flex-direction: column;
@@ -9,7 +9,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* Título */
 .cadastro-title {
   font-size: 2.5rem;
   margin-bottom: 5px;
@@ -19,11 +18,20 @@
 
 .cadastro-subtitle {
   color: #002b5b;
+  margin-bottom: 20px;
+}
+
+.cadastro-box {
+  background: #f4f4f4;
+  padding: 30px;
+  border-radius: 8px;
+  width: 380px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 25px;
   text-align: center;
 }
 
-/* Caixa central */
+
 .cadastro-box {
   background: #f9f9f9;
   padding: 35px;
@@ -38,11 +46,14 @@
 }
 
 label {
-  margin-top: 12px;
+  margin-top: 10px;
   font-weight: bold;
 }
 
-input,
+input {
+  padding: 10px;
+  margin-top: 5px;
+
 select {
   padding: 12px;
   margin-top: 6px;
@@ -53,6 +64,7 @@ select {
 button {
   margin-top: 25px;
   padding: 12px;
+
   background: #002b5b;
   color: white;
   border: none;
@@ -67,10 +79,14 @@ button:hover {
   background: #004080;
 }
 
-/* Link para login */
+.ja-tem-conta {
+  text-align: center;
+  margin-top: 15px;
+
 .ja-tem-conta {
   text-align: center;
   margin-top: 20px;
+
 }
 
 .ja-tem-conta a {
@@ -83,10 +99,19 @@ button:hover {
   margin-top: 30px;
   text-align: center;
   color: #333;
+
+}
+
+.logo {
+  width: 200px;
+  display: block;
+  margin: 0 auto 10px;
+
 }
 
 .logo {
   width: 180px;
   display: block;
   margin: 0 auto 15px;
+
 }

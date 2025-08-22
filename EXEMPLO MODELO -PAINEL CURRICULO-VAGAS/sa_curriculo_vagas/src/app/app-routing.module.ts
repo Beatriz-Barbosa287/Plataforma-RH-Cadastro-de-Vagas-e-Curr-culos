@@ -8,11 +8,14 @@ import { CadastroComponent } from './view/cadastro/cadastro.component';
 import { LoginComponent } from './view/login/login.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' }, 
+  { path: 'inicio', component: InicioComponent },
   { path: 'curriculos', component: CurriculoComponent },
   { path: 'vagas', component: VagasComponent },
   { path: 'painel-vagas', component: PainelVagasComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo: 'inicio' },
 ];
 
 @NgModule({

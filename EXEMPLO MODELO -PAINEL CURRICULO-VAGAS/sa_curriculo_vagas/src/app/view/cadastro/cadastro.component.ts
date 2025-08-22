@@ -1,14 +1,29 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
+  styleUrls: ['./cadastro.component.scss'],
 })
 export class CadastroComponent {
-  constructor(private router: Router) {}
+  nome: string = '';
+  email: string = '';
+  senha: string = '';
+  confirmarSenha: string = '';
+  tipoUsuario: string = '';
 
-  cadastrar() {
-    this.router.navigate(['/login']);
+  constructor() {}
+
+  onCadastro() {
+    if (this.senha !== this.confirmarSenha) {
+      alert('As senhas não coincidem!');
+      return;
+    }
+
+    if (this.nome && this.email && this.senha && this.tipoUsuario) {
+      alert(`Cadastro realizado com sucesso para ${this.nome}!`);
+    } else {
+      alert('Preencha todos os campos!');
+    }
   }
 }
