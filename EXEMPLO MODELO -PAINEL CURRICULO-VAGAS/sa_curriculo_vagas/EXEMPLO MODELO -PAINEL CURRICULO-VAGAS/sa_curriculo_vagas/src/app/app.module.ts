@@ -1,0 +1,35 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { InicioComponent } from './view/inicio/inicio.component';
+import { CurriculoComponent } from './view/curriculos/curriculo.component';
+import { VagasComponent } from './view/vagas/vagas.component';
+import { HeaderComponent } from './template/header/header.component';
+import { FooterComponent } from './template/footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { PainelVagasComponent } from './view/painel-vagas/painel-vagas.component';
+import { FormsModule } from '@angular/forms';
+import { CadastroComponent } from './view/cadastro/cadastro.component';
+import { LoginComponent } from './view/login/login.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    InicioComponent,
+    CurriculoComponent,
+    VagasComponent,
+    HeaderComponent,
+    FooterComponent,
+    PainelVagasComponent,
+    CadastroComponent,
+    LoginComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, FormsModule],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+
