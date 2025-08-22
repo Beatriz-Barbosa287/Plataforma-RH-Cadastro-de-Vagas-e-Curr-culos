@@ -1,38 +1,37 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Vaga } from '../models/vaga.model';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class VagaService {
-  //atributo -> localhost
-  private apiUrl = 'http://localhost:3009/vagas'; //Caminho para o Arquivo Json
+export class VagasService {
+  private apiUrl = 'http://localhost:3010/vagas'; // URL do json-server
 
   constructor(private http: HttpClient) {}
 
-  //Comunição CRUD da API ( get / post/ put / delete)
-
-  //obter a lista de vagas (GET)
-  getVagas(): Observable<Vaga[]> {
-    return this.http.get<Vaga[]>(this.apiUrl);
+  // Criar Vaga
+  createVaga(vaga: any): Observable<any> {
+    return this.http.post(this.apiUrl, vaga);
   }
 
-  //Cadastrar POST
-  cadastrarVaga(vaga: Vaga): Observable<Vaga[]> {
-    return this.http.post<Vaga[]>(this.apiUrl, vaga);
+  // Editar Vaga
+  editVaga(id: number, vaga: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, vaga);
   }
 
-  //Atualizar PUT
-atualizarVaga(id: any, vaga: Vaga): Observable<Vaga[]> {
-  const urlAtualizar = `${this.apiUrl}/${id}`;
-  return this.http.put<Vaga[]>(urlAtualizar, vaga);
-}
+  // Excluir Vaga
+  deleteVaga(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
+  }
 
-//Deletar DELETE
-removerVaga(id: any): Observable<Vaga[]> {
-  const urlDeletar = `${this.apiUrl}/${id}`;
-  return this.http.delete<Vaga[]>(urlDeletar);
-}
+  // Listar Vagas
+  getVagas(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
+  }
+
+  // Visualizar Vaga Específica
+  getVaga(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
+  }
 }

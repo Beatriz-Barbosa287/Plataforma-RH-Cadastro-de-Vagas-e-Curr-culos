@@ -1,25 +1,15 @@
+
+
 {
   "usuarios": [
     {
-
-    }
-  ],
-
-  "curriculos": [
-    {
       "id": 1,
-      "nome": "João Silva",
-      "email": "joao@email.com",
-      "experiencia": "FrontEnd Jr",
-      "foto": "curriculo1.jpg"
-    },
-    {
-      "id": 2,
-      "nome": "Maria Souza",
-      "email": "maria@email.com",
-      "experiencia": "BackEnd Pleno",
-      "foto": "curriculo2.jpg"
+      "email": "admin@rh.com",
+      "senha": "admin123",
+      "tipo": "admin"
     }
   ],
+  "curriculos": [],
   "vagas": []
 }
+

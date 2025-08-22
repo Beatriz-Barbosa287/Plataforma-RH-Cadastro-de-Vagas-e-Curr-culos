@@ -126,53 +126,53 @@ Login
 - Exibir mensagens de sucesso ou erro para cadastro, login, envio de currículo e operações CRUD.
 -----------------------------------------------------------
 ## Requisitos Não Funcionais
-Desempenho
-A aplicação deve carregar em até 3 segundos em conexões comuns de internet.
-Usabilidade
-Interface intuitiva e fácil de navegar.
-Layout responsivo para desktop e dispositivos móveis.
-Segurança
-Autenticação de usuários e restrição de acesso às funcionalidades por perfil.
-Não expor dados sensíveis no front-end.
-Manutenibilidade
-Código organizado em componentes e serviços reutilizáveis.
-Uso de boas práticas Angular (modularização, SCSS estruturado, Reactive Forms).
-Portabilidade
-Funcionar em navegadores modernos (Chrome, Edge, Firefox).
-Confiabilidade
-Operações CRUD devem refletir corretamente no back-end simulado (json-server).
-Tratamento de erros para ações inválidas ou dados incorretos.
+- Desempenho
+- A aplicação deve carregar em até 3 segundos em conexões comuns de internet.
+- Usabilidade
+- Interface intuitiva e fácil de navegar.
+- Layout responsivo para desktop e dispositivos móveis.
+- Segurança
+- Autenticação de usuários e restrição de acesso às funcionalidades por perfil.
+- Não expor dados sensíveis no front-end.
+- Manutenibilidade
+- Código organizado em componentes e serviços reutilizáveis.
+- Uso de boas práticas Angular (modularização, SCSS estruturado, Reactive Forms).
+- Portabilidade
+- Funcionar em navegadores modernos (Chrome, Edge, Firefox).
+- Confiabilidade
+- Operações CRUD devem refletir corretamente no back-end simulado (json-server).
+- Tratamento de erros para ações inválidas ou dados incorretos.
 -----------------------------------------------------------
 ## Requisitos Humanos
 1. Equipe de Desenvolvimento
-Desenvolvedores Angular
-Conhecimento em Angular 16+, TypeScript e componentes.
-Experiência com Reactive Forms, SCSS e boas práticas de componentização.
-Capacidade de implementar autenticação, autorização e guardas de rota.
-Designer UI/UX
-Experiência em prototipagem (Figma ou similar).
-Criar interfaces responsivas e intuitivas, seguindo a identidade visual da marca.
-Gerente de Projeto / Coordenador
-Acompanhar prazos, organizar tarefas e revisar entregas.
-Comunicação entre cliente e equipe.
-Usuários Finais
-Candidatos
-Saber utilizar computador ou dispositivo móvel para cadastro, login e envio de currículos.
-Conhecimento básico de navegação em websites.
-Administradores
-Capacidade de cadastrar, editar e excluir vagas.
-Visualizar currículos enviados e gerenciar o processo seletivo.
-Outras Considerações Humanas
-Necessidade de treinamento rápido ou documentação para novos usuários administradores.
-Garantir que a experiência do usuário seja intuitiva, reduzindo a dependência de suporte técnico.
-Capacidade da equipe de interpretar o briefing e protótipos para transformar requisitos em código funcional.Desenvolvimento Angular
-Tecnologias
-Angular 16+
-SCSS customizado
-JSON Server
-Reactive Forms
-LocalStorage para sessão
-Guardas de rota
+- Desenvolvedores Angular
+- Conhecimento em Angular 16+, TypeScript e componentes.
+- Experiência com Reactive Forms, SCSS e boas práticas de componentização.
+- Capacidade de implementar autenticação, autorização e guardas de rota.
+- Designer UI/UX
+- Experiência em prototipagem (Figma ou similar).
+- Criar interfaces responsivas e intuitivas, seguindo a identidade visual da marca.
+- Gerente de Projeto / Coordenador
+- Acompanhar prazos, organizar tarefas e revisar entregas.
+- Comunicação entre cliente e equipe.
+- Usuários Finais
+- Candidatos
+- Saber utilizar computador ou dispositivo móvel para cadastro, login e envio de currículos.
+- Conhecimento básico de navegação em websites.
+- Administradores
+- Capacidade de cadastrar, editar e excluir vagas.
+- Visualizar currículos enviados e gerenciar o processo seletivo.
+- Outras Considerações Humanas
+- Necessidade de treinamento rápido ou documentação para novos usuários administradores.
+- Garantir que a experiência do usuário seja intuitiva, reduzindo a dependência de suporte técnico.
+- Capacidade da equipe de interpretar o briefing e protótipos para transformar requisitos em código funcional.Desenvolvimento Angular
+- Tecnologias
+- Angular 16+
+- SCSS customizado
+- JSON Server
+- Reactive Forms
+- LocalStorage para sessão
+- Guardas de rota
 ----------------------------------------------------------
 ## Limites da Plataforma
 1. Funcionalidades Não Implementadas
