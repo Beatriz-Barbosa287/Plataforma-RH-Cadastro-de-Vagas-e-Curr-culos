@@ -16,7 +16,7 @@ export class LoginComponent {
   onLogin() {
     if (this.email && this.senha && this.tipoUsuario) {
       alert(`Login realizado com sucesso! Bem-vindo!`);
-      this.router.navigate(['/painel-vagas']);
+      this.router.navigate(['/vagas']);
     } else {
       alert('Usuário ou senha inválidos!');
     }

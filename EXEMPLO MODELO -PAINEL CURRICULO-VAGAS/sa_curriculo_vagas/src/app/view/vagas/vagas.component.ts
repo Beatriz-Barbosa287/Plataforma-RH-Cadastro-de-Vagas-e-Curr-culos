@@ -14,10 +14,10 @@ export class VagasComponent implements OnInit {
 
   constructor(private vagaService: VagasService) {}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    throw new Error('Erro');
   }
 
   candidatar(vaga: any) {
-    // Implement your logic here
+    alert(`Candidatura enviada para a vaga: ${vaga.titulo}`);
   }
 }
