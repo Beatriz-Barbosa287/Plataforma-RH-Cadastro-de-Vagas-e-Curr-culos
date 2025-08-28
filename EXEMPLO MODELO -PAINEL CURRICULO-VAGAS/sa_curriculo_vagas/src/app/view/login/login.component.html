@@ -3,7 +3,7 @@
   <h3 class="subtitle">Acesse sua conta</h3>
 
   <div class="login-box">
-    <form (ngSubmit)="onLogin()">
+    <form (ngSubmit)="login()">
       <label for="email">E-mail</label>
       <input
         type="email"
@@ -34,7 +34,7 @@
         <option value="candidato">Administrador</option>
       </select>
 
-      <button type="button" (click)="onLogin()">Entrar</button>
+      <button type="submit">Entrar</button>
     </form>
 
     <p class="cadastro">
