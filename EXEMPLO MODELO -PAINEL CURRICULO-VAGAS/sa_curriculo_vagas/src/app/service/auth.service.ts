@@ -1,45 +1,51 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3010/usuarios'; // URL do json-server
+  private usuarioAtual: any = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private router: Router) {}
 
-  // Registrar Usuário
-  register(email: string, senha: string): Observable<any> {
-    const newUser  = { email, senha, tipo: 'comum' };
-    return this.http.post(this.apiUrl, newUser );
-  }
+  login(email: string, senha: string, tipo: string): boolean {
+    const usuarios = [
+      { email: 'admin@site.com', senha: '1234', tipo: 'admin' },
+      { email: 'user@site.com', senha: '1234', tipo: 'comum' },
+    ];
 
-  // Login
-  login(email: string, senha: string): Observable<any> {
-    return this.http.get<any[]>(this.apiUrl).pipe(
-      map(users => users.find(user => user.email === email && user.senha === senha))
+    const user = usuarios.find(
+      (u) => u.email === email && u.senha === senha && u.tipo === tipo
     );
+
+    if (user) {
+      this.usuarioAtual = user;
+      localStorage.setItem('usuario', JSON.stringify(user));
+      return true;
+    }
+    return false;
   }
 
-  // Logout
-  logout(): void {
+  logout() {
+    this.usuarioAtual = null;
     localStorage.removeItem('usuario');
+    this.router.navigate(['/login']);
   }
 
-  // Verificar Autenticação
-  isAuthenticated(): boolean {
-    return !!localStorage.getItem('usuario');
+  usuarioLogado() {
+    if (!this.usuarioAtual) {
+      const userData = localStorage.getItem('usuario');
+      this.usuarioAtual = userData ? JSON.parse(userData) : null;
+    }
+    return this.usuarioAtual;
   }
 
-  // Armazenar usuário no localStorage
-  setUser (user: any): void {
-    localStorage.setItem('usuario', JSON.stringify(user));
+  isAdmin(): boolean {
+    return this.usuarioLogado()?.tipo === 'admin';
   }
 
-  // Obter usuário atual
-  usuarioAtual(): any {
-    return JSON.parse(localStorage.getItem('usuario') || '{}');
+  estaLogado(): boolean {
+    return !!this.usuarioLogado();
   }
 }

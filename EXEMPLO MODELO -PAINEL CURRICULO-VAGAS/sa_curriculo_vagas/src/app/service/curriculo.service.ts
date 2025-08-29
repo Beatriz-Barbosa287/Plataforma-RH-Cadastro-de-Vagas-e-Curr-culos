@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CurriculoService {
-  private apiUrl = 'http://localhost:3010/curriculos'; // URL do json-server
+  private apiUrl = 'http://localhost:3005/curriculos';
 
   constructor(private http: HttpClient) {}
 
