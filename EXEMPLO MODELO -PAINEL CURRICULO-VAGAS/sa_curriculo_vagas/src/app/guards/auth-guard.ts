@@ -34,6 +34,13 @@ export class AuthGuard implements CanActivate {
       return false;
     }
 
+  canActivate(): boolean {
+    const usuarioLogado = !!localStorage.getItem('usuarioLogado');
+    if (!usuarioLogado) {
+      this.router.navigate(['/login']);
+      return false;
+    }
+
     return true;
   }
 }

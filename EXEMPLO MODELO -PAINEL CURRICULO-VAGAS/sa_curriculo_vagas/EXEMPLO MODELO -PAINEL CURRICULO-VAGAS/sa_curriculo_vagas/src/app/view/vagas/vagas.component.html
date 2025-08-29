@@ -1,0 +1,22 @@
+
+<div class="vagas-container">
+  <div class="logo">
+    <img src="assets/logo.png" alt="RH Connect">
+    <h2>RH Connect</h2>
+  </div>
+
+  <div class="cards">
+    <div *ngFor="let vaga of vagas" class="card">
+      <h3>{{ vaga.titulo }}</h3>
+      <p><strong>Área/Departamento:</strong> {{ vaga.departamento }}</p>
+      <p><strong>Local:</strong> {{ vaga.local }}</p>
+      <p><strong>Tipo de Contratação:</strong> {{ vaga.tipo }}</p>
+      <p><strong>Data de Publicação:</strong> {{ vaga.dataPublicacao | date:'dd/MM/yyyy' }}</p>
+      <button (click)="candidatar(vaga)">Candidatar</button>
+
+
+    </div>
+  </div>
+
+  <footer>RH Connect © {{ currentYear }}</footer>
+</div>

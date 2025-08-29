@@ -14,6 +14,7 @@ interface Vaga {
   styleUrls: ['./vagas.component.scss']
 })
 export class VagasComponent implements OnInit {
+
   vagas: Vaga[] = [];
   currentYear: number = new Date().getFullYear();
  
@@ -62,6 +63,7 @@ export class VagasComponent implements OnInit {
         dataPublicacao: new Date(2025, 5, 12)
       }
     ];
+
   }
  
   candidatar(vaga: Vaga): void {

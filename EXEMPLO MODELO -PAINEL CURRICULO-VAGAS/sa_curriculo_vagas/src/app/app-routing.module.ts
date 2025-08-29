@@ -12,7 +12,6 @@ import { AdminGuard } from './guards/admin-guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
-
   { path: 'inicio', component: InicioComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
@@ -29,6 +28,8 @@ const routes: Routes = [
     component: PainelVagasComponent,
     canActivate: [AdminGuard],
   },
+
+  { path: 'painel', component: PainelVagasComponent, canActivate: [AuthGuard] },
 
   { path: '**', redirectTo: 'inicio' },
 ];

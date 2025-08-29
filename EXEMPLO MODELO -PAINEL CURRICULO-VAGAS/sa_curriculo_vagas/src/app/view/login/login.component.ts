@@ -54,6 +54,12 @@ export class LoginComponent {
             alert('Erro ao tentar fazer login!');
           },
         });
-    }
+
+  }
+
+
+  logout() {
+    localStorage.removeItem('usuarioLogado');
+    this.router.navigate(['/login']);
   }
 }
